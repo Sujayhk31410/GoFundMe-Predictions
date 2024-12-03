@@ -28,9 +28,3 @@ Key features include:
 - **Supervised Learning**: Regression to predict raised amount.
 - **Key Algorithms**: Logistic Regression, Decision Trees, and SVM.
 - **Tools**: Python (scikit-learn, pandas), NLP libraries, Face++ API.
-
-## How to Use
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/GoFundMe-Predictions.git
-   cd GoFundMe-Predictions
