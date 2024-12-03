@@ -1,9 +1,6 @@
-# **GoFundMe Campaign Success Prediction**
+# **Predicting the Success of GoFundMe Campaigns**
 
-This project analyzes GoFundMe campaign data to predict fundraising success by analyzing narratives and visual content. Leveraging machine learning and image analysis, the goal is to provide actionable insights for campaign organizers to optimize their fundraising strategies and achieve their goals.
-
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![License](https://img.shields.io/badge/license-MIT-blue)
+This project explores how narrative and visual features impact the success of GoFundMe campaigns. Using machine learning techniques, we aim to provide actionable insights to help campaign organizers optimize their strategies and achieve their fundraising goals.
 
 ---
 
@@ -26,86 +23,82 @@ This project analyzes GoFundMe campaign data to predict fundraising success by a
 
 ## **Project Overview**
 
-GoFundMe is the world’s largest crowdfunding platform, helping individuals and organizations raise funds for various causes such as medical emergencies, education, and community projects. This project seeks to predict the success of campaigns by analyzing campaign narratives and visual features, using machine learning models to gain insights into fundraising behaviors.
+GoFundMe is the world’s largest crowdfunding platform, enabling individuals and organizations to raise funds for various causes, from medical emergencies to educational initiatives. While some campaigns exceed their goals, others struggle to gain momentum. This project investigates factors influencing campaign success, leveraging data science to predict outcomes and guide effective campaign management.
 
 ---
 
 ## **Objectives**
-- **Predict Campaign Success:** Build models to predict daily fundraising amounts and identify the likelihood of meeting campaign goals.
-- **Analyze Narrative and Visual Features:** Evaluate how the narrative structure and visual content (images) influence donations.
-- **Provide Actionable Insights:** Equip campaign organizers with insights to optimize their campaigns and increase their chances of success.
+- **Predict Campaign Success:** Build models to estimate daily fundraising amounts and determine the likelihood of meeting goals.
+- **Analyze Narrative and Visual Features:** Identify the influence of textual and visual elements on donation behaviors.
+- **Provide Actionable Insights:** Offer data-driven recommendations to enhance campaign performance.
 
 ---
 
 ## **Data Collection and Processing**
-- **Source:** Data was scraped from the GoFundMe website using Beautiful Soup and Playwright.
-- **Dataset:** A total of 8,881 campaigns with the following features:
+- **Source:** Web-scraped GoFundMe campaigns using Beautiful Soup and Playwright.
+- **Dataset:** 8,881 campaign entries with features including:
   - **Textual Data:** Titles, campaign stories.
-  - **Visual Data:** Analyzed using the **Face++ API** for attributes like gender, emotion, smile intensity, etc.
-  - **Additional Features:** Raised amount, goal amount, number of donations, location, category, and campaign organizer.
+  - **Visual Data:** Analyzed using the Face++ API for attributes like gender, emotion, and smile intensity.
+  - **Other Variables:** Raised amount, goal amount, location, category, and number of donations.
 
 **Key Preprocessing Steps:**
-- **Text Cleaning:** Removed special characters, extra spaces, and irrelevant symbols to clean the text.
-- **Date Conversion:** Transformed relative dates into specific date formats.
-- **Feature Extraction:** Created new features like word count, emotion categories, and goal achievement ratio.
-  
+- Cleaned and formatted text (removed special characters, whitespace, etc.).
+- Converted dates to a consistent format.
+- Extracted additional features like word count, emotion categories, and goal achievement ratios.
+
 ---
 
 ## **Methodology**
 
 ### **1. Text Analysis**
-- **TF-IDF:** Applied Term Frequency-Inverse Document Frequency (TF-IDF) to identify key words in the campaign narratives.
-- **word2vec:** Used word embeddings to capture contextual meanings of words and phrases that impact donation behavior.
+- **TF-IDF**: Identified the importance of words in campaign narratives.
+- **word2vec**: Captured contextual meanings to evaluate the impact of phrases on donations.
 
 ### **2. Visual Feature Extraction**
-- Utilized the **Face++ API** to analyze images for features such as:
-  - **Gender**
-  - **Age**
-  - **Emotion** (anger, sadness, happiness, etc.)
-  - **Smile Intensity**
-  - **Beauty Score**
+- Extracted image-based features using the Face++ API, including age, emotion, and smile intensity.
 
 ### **3. Machine Learning Models**
-- **Regression Models:** Built models to predict the amount raised based on campaign text and visual features.
-- **Clustering (K-means):** Grouped campaigns by urgency levels to prioritize those needing immediate support.
-- **Hyperparameter Tuning:** Applied **Grid Search** for optimizing model parameters.
+- **Regression Models:** Predicted the raised amount based on textual and visual features.
+- **Clustering (K-means):** Grouped campaigns by urgency to prioritize high-need campaigns.
+- **Hyperparameter Tuning:** Applied Grid Search for model optimization.
 
 ---
 
 ## **Results**
-- **Text and Image Data Correlation:** Both the campaign story text and visual features significantly influenced fundraising success.
-- **Urgency Clustering:** Identified high-priority campaigns that could benefit from early intervention.
-- **Model Accuracy:** The models showed strong predictive accuracy for daily fundraising amounts and the likelihood of meeting goals.
+- Text and image data significantly influence the success of campaigns.
+- Models demonstrated the potential to predict daily fundraising progress and identify urgent campaigns needing intervention.
+- Clustering analysis revealed actionable patterns in donation timing and behaviors.
 
 ---
 
 ## **Impact**
-This project provides valuable tools for campaign organizers to:
-- **Optimize Campaigns:** Gain insights into how narrative elements and visuals impact donations.
-- **Improve Engagement:** Identify key factors for increasing visibility and engagement in campaigns.
-- **Prioritize Urgent Campaigns:** Use urgency clusters to focus on campaigns that require immediate attention.
+This project provides a practical tool for campaign organizers, enabling them to:
+- Understand the factors that drive donations.
+- Optimize campaign narratives and visuals.
+- Prioritize efforts for maximum fundraising impact.
 
 ---
 
 ## **Technologies Used**
-- **Web Scraping:** Beautiful Soup, Playwright
-- **Text Analysis:** TF-IDF, word2vec
-- **Image Analysis:** Face++ API
-- **Machine Learning:** Scikit-learn, K-means clustering
-- **Data Visualization:** Matplotlib, Seaborn
+- **Web Scraping:** Beautiful Soup, Playwright.
+- **Text Analysis:** TF-IDF, word2vec.
+- **Image Analysis:** Face++ API.
+- **Machine Learning:** Scikit-learn (for regression, clustering, and classification tasks).
+- **Data Visualization:** Matplotlib, Seaborn.
 
 ---
 
 ## **Future Enhancements**
-- **Sentiment Analysis:** Implement more advanced sentiment analysis techniques to better understand emotional tone in campaign narratives.
-- **Topic Modeling:** Explore **Latent Dirichlet Allocation (LDA)** to identify key topics in campaigns and analyze their impact on donations.
-- **Geographical Influence:** Study how the location of campaigns (e.g., city, state) impacts fundraising success.
-- **Social Media Integration:** Add external data sources, such as social media mentions, to enhance prediction accuracy.
-- **Temporal Trends:** Analyze the timing of campaigns (e.g., holiday seasons) and its effect on fundraising success.
+- **Topic Modeling**: Implement **Latent Dirichlet Allocation (LDA)** or **Non-Negative Matrix Factorization (NMF)** to identify key topics in campaign stories and assess their impact on donations.
+- **Visual Content Analysis**: Evaluate the impact of other visual attributes, such as background elements and visual consistency across images, to further improve prediction models.
+- **Predicting Campaign Duration**: Develop models to estimate the duration a campaign will take to meet its goal based on early donation patterns and narrative content.
+- **Geographical Influence**: Investigate how location-based features (e.g., city, state) influence campaign success, especially in light of local events, economic conditions, and community engagement.
+- **Temporal Analysis**: Study how campaign timing (e.g., holiday seasons, weekday vs. weekend) influences fundraising success, potentially building time-based prediction models.
+- **Integration with Social Media**: Expand the dataset by incorporating social media data (e.g., Twitter, Instagram) to analyze how external factors like social sharing affect campaign success.
 
 ---
 
 ## **How to Run**
-1. **Clone this repository:**
+1. Clone this repository:
    ```bash
    git clone https://github.com/Sujayhk31410/GoFundMe-Prediction.git
