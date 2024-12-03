@@ -101,4 +101,4 @@ This project provides a practical tool for campaign organizers, enabling them to
 ## **How to Run**
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/GoFundMe-Prediction.git
+   git clone https://github.com/Sujayhk31410/GoFundMe-Prediction.git
