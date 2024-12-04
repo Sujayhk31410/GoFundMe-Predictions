@@ -89,12 +89,11 @@ This project provides a practical tool for campaign organizers, enabling them to
 ---
 
 ## **Future Enhancements**
-- **Topic Modeling**: Implement **Latent Dirichlet Allocation (LDA)** or **Non-Negative Matrix Factorization (NMF)** to identify key topics in campaign stories and assess their impact on donations.
-- **Visual Content Analysis**: Evaluate the impact of other visual attributes, such as background elements and visual consistency across images, to further improve prediction models.
 - **Predicting Campaign Duration**: Develop models to estimate the duration a campaign will take to meet its goal based on early donation patterns and narrative content.
-- **Geographical Influence**: Investigate how location-based features (e.g., city, state) influence campaign success, especially in light of local events, economic conditions, and community engagement.
 - **Temporal Analysis**: Study how campaign timing (e.g., holiday seasons, weekday vs. weekend) influences fundraising success, potentially building time-based prediction models.
-- **Integration with Social Media**: Expand the dataset by incorporating social media data (e.g., Twitter, Instagram) to analyze how external factors like social sharing affect campaign success.
+- **Fraud Detection in Crowdfunding**: Develop models to identify potentially fraudulent campaigns based on unusual patterns in text, image, and donation data, improving the integrity of the platform.
+- **Social Media & User Engagement**: Integrate social media data (e.g., Twitter, Instagram) to assess the impact of social sharing, comments, shares, and likes on campaign success and performance.
+- **Multi-Language Support**: Extend the project to support multi-language campaigns, using language translation tools and multilingual NLP models to analyze and predict success across different languages.
 
 ---
 
