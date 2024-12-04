@@ -1,6 +1,6 @@
 # **Predicting the Success of GoFundMe Campaigns**
 
-This project explores how narrative and visual features impact the success of GoFundMe campaigns. Using machine learning techniques, we aim to provide actionable insights to help campaign organizers optimize their strategies and achieve their fundraising goals.
+This project explores how narrative and visual features influence GoFundMe campaigns and focuses on predicting the raised amount for a campaign on any given day. By leveraging machine learning techniques, we aim to provide actionable insights to help campaign organizers optimize their strategies and improve fundraising outcomes.
 
 ---
 
@@ -68,6 +68,7 @@ GoFundMe is the world’s largest crowdfunding platform, enabling individuals an
 - Text and image data significantly influence the success of campaigns.
 - Models demonstrated the potential to predict daily fundraising progress and identify urgent campaigns needing intervention.
 - Clustering analysis revealed actionable patterns in donation timing and behaviors.
+- The strongest predictors of the raised amount are numeric features like the number of donations, goal progress ratio, and goal amount, which directly impact fundraising success. Text-based features, such as specific words in the campaign description (e.g., family, little, health, world), enhance emotional and contextual appeal, motivating donors. Visual elements (e.g., beauty) and descriptive length also contribute, though their impact is secondary to numeric features.
 
 ---
 
